@@ -4,10 +4,13 @@ def line(array_of_people)
     if array_of_people.size == 0
         puts "The line is currently empty."
     else
-        puts 'The line is currently: '
+        new_array = []
+        counter = 1
         array_of_people.each do |name|
-            puts "#{array_of_people.index(name) + 1}. #{name} "
+            new_array.push("#{counter}. #{name}")
+            counter += 1
         end
+        puts "The line is currently: #{new_array.join(" ")}"
     end
 end
 
